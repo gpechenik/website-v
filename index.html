@@ -30,23 +30,25 @@
         a {
           position: relative;
           text-decoration: none;
-          color: #333;
+          color: #333333;
         }
-        
         a::after {
           content: "";
           position: absolute;
           left: 0;
           bottom: -2px;
-          width: 100%;
+          width: 0;
           height: 1px;
-          background: #333;
+          background: #666666;
+          transition: width 0.3s ease, opacity 0.3s ease;
           opacity: 0;
-          transition: opacity 0.3s ease;
         }
-        
         a:hover::after {
+          width: 100%;
           opacity: 1;
+        }
+        a:active::after {
+          opacity: 0;
         }
         p.email {
             color: #888888;
